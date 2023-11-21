@@ -1,0 +1,1 @@
+Input ← &ru"\n"&fo"input.txt"
