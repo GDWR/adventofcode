@@ -1,1 +1,1 @@
-Input ← &ru"\n"&fo"input.txt"
+Input ← &ru"\0"&fo"input.txt"
