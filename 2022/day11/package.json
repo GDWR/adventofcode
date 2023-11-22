@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "npm run compile && node main.js",
+    "compile": "tsc --module nodenext --target esnext main.ts"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^18.11.10",
+    "typescript": "^4.9.3"
+  }
+}
