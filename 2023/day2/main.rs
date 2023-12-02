@@ -13,6 +13,18 @@ fn main() {
         .sum();
 
     println!("Part one: {}", part_one);
+
+    let part_two: usize = games.iter()
+        .map(|game| {
+            let r = game.rounds.iter().max_by(|x, y| x.red.cmp(&y.red)).unwrap();
+            let g = game.rounds.iter().max_by(|x, y| x.green.cmp(&y.green)).unwrap();
+            let b = game.rounds.iter().max_by(|x, y| x.blue.cmp(&y.blue)).unwrap();
+
+            return r.red * g.green * b.blue;
+        })
+        .sum();
+
+    println!("Part two: {:?}", part_two);
 }
 
 
@@ -58,7 +70,7 @@ struct Game {
 
 #[derive(Debug, Default)]
 struct Round {
-    pub red: usize,
+    red: usize,
     green: usize,
     blue: usize,
 }
